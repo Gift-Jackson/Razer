@@ -190,6 +190,22 @@ footer p{
     background: #fefefe;
     color: #222;
 }
+#card{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card .card{
+    width: 400px;
+    margin: auto;
+    background: #;
+    text-align: center;
+}
+.card p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 /* media queries */
 @media(max-width: 768px){
     #main{
