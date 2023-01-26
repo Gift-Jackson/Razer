@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: linear-gradient(to right,#243748,#4b749f);
+    width: 100%;
+    height: auto;
+    color: #fefefe;
+}
+#main{
+    width: 80%;
+    margin: auto;
+}
+#chk{
+    display: none;
+}
+.toggle{
+    font-size: 30px;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.mark, h2{
+    color:gold;
+    text-shadow: 0px 1px 3px orangered;
+}
+header{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: 0.1s;
+}
+
+header.scroll {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    background: #fefefe;
+    color: #111;
+    top: 0;
+    z-index: 100;
+    padding: 0 1em;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.4);
+}
+
+header.scroll .toggle {
+  right: 1em;
+  top: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li a{
+    color: #fefefe;
+    margin-left: 50px;
+}
+nav ul li a:hover, .active{
+    border-bottom: 4px solid orange;
+    padding-bottom: 6px;
+}
+.wrapper{
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper .wrap{
+    width: 50%;
+}
+.wrap-2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.wrap h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.button{
+    margin-top: 40px;
+}
+.button .btn{
+    height: 50px;
+    width: 190px;
+    border: none;
+    border-radius: 0.7rem;
+    background: #fefefe;
+    color: ;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+.button .btn:active{
+    background: orange;
+    color: #243748;
+}
+.button .btn-2{
+    width: 250px;
+}
+marquee{
+    padding: 1rem 0;
+    text-align: center;
+    background: orange;
+}
+.container{
+    margin-top: 20px;
+}
+.container h2, .area h2, .area{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.boxes .box{
+    width: 30%;
+    padding: 0.8rem;
+    text-align: center;
+    background: #fefefe;
+    color: #243748;
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.4);
+}
+.boxes .box h3{
+    margin-bottom: 20px;
+}
+.boxes .box p a{
+    color: orange;
+}
+.arrow{
+    font-weight: bold;
+    font-size: 20px;
+}
+.content{
+    width: 500px;
+    margin: auto;
+}
+.content p{
+    margin-bottom: 20px;
+}
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 40px;
+    background: orange;
+    font-weight: bold;
+}
+footer p{
+    font-size: 13px;
+}
+.form{
+    margin-top: 30px;
+}
+.col{
+    margin-bottom:20px;
+    margin-top: 10px;
+}
+.col input {
+    width: 100%;
+    height: 46px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+#btn{
+    height: 48px;
+    width: 80%;
+    margin: auto;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fefefe;
+    background: orange;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+#btn:active{
+    background: #fefefe;
+    color: #222;
+}
+/* media queries */
+@media(max-width: 768px){
+    #main{
+        width: 90%;
+    }
+    .content{
+        width: 100%;
+    }
+    header{
+        position: sticky;
+    }
+    .toggle{
+        display: block;
+    }
+    .cancel{
+        display: none;
+    }
+    nav ul{
+        display: block;
+        text-align: center;
+        background: #fefefe;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -50%;
+        width: 50%;
+        padding-top: 50px;
+        z-index: 9;
+        transition: 0.2s;
+    }
+    nav ul li{
+        line-height: 50px;
+    }
+    nav ul li a{
+        color: #243748;
+        margin-left: 0;
+        padding-bottom: 0;
+        transition: 0.2s;
+    }
+    nav ul li a:hover, .active{
+        border-bottom: unset;
+        color: orange;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #chk:checked ~ nav ul{
+        left: 0;
+    }
+    #chk:checked ~ .toggle .bar{
+        display: none;
+    }
+    #chk:checked ~ .toggle .cancel{
+        display: block;
+    }
+    .wrapper{
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .boxes{
+        flex-direction: column;
+    }
+    section {
+        margin: 2rem 0;
+    }
+    .wrapper .wrap, .boxes .box{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .wrap-2{
+        justify-content: center;
+    }
+    .button .btn{
+        width: 80%;
+    }
+    
+}
